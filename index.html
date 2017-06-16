@@ -19,14 +19,14 @@
           <div class="col-md-6">
             <!-- pizza order form -->
             <form id="pizza-order" method="submit">
-              <div class="form-group" id="pizza-size">
+              <div class="form-group pizza-size">
                 <label for="pizza-size">Select a pizza size:</label>
                 <select class="form-control" id="pizza-size">
-                  <option>5" mini - $7</option>
-                  <option>7" - $9</option>
-                  <option>9" - $11</option>
-                  <option>11" - $13</option>
-                  <option>13" - $15</option>
+                  <option value="5">5" mini - $7</option>
+                  <option value="7">7" - $9</option>
+                  <option value="9">9" - $11</option>
+                  <option value="11">11" - $13</option>
+                  <option value="13">13" - $15</option>
                 </select>
               </div>
               <div class="form-group" id="pizza-toppings">
@@ -41,8 +41,8 @@
                 <input type="checkbox" name="pizza-toppings" value="pineapple"> pineapple - $1<br>
                 <input type="checkbox" name="pizza-toppings" value="extra cheese"> extra cheese - $0.50<br>
               </div>
+              <button type="submit" class="btn" id="order">Place my order!</button>
             </form>
-            <button type="submit" class="btn" id="order">Place my order!</button>
             <div class="display-cost">
               <h2>Your Total: <span> <!--cost display goes here --> </span></h2>
             </div>
