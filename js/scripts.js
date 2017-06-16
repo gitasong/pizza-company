@@ -36,11 +36,6 @@ function getToppingsPrice(_toppingsArr) {
 };
 
 Pizza.prototype.getCost = function() {
-  // var pizzaSize = this.size;
-  // implement function to get cost from pizza size and toppings
-  // var price = 0;
-  // price = inputtedPizzaSize;
-  // console.log(price);
   return /* getPizzaPrice(pizzaSize) + */ getToppingsPrice(toppingsArr);  // can't get this to work with any variation of pizzaSize, including inputtedPizzaSize, this.size, Pizza.prototype.size, or any other related variable, and whether or not I use the getPizzaPrice() function or just the pizzaSize variable + 2
 };
 
@@ -76,9 +71,7 @@ $(document).ready(function() {
     resetFields();
 
     $(".display-cost").show();
-    // $("span#pizza-cost").text(newPizza.cost);  // displays cost of full pizza with toppings
-    // $("span#pizza-cost").text(getPizzaPrice(inputtedPizzaSize));
-    // $("span#pizza-cost").text(getToppingsPrice(toppingsArr)); // works
+
     $("span#pizza-cost").text(newPizza.cost); // works
       console.log(getPizzaPrice(pizzaSize));
       console.log(getToppingsPrice(toppingsArr));
