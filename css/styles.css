@@ -1,3 +1,42 @@
+.jumbotron {
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(149, 42, 24, 0.8);
+}
+
+.jumbotron img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.30;
+}
+
+.jumbotron h1 {
+  padding: 0px;
+  position: relative;
+  z-index: 2;
+  color: #e8d2a7;
+}
+
+.jumbotron h3{
+  padding: 0px;
+  position: relative;
+  z-index: 2;
+  color: #faf5eb;
+}
+
+button#order {
+  background-color: #a43a01;
+  color: #fff;
+}
+
+button#order:hover {
+  background-color: #e8d2a7;
+  color: #a43a01;
+}
+
 .display-cost, .display-order {
   display: none;
 }
