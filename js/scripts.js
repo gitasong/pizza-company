@@ -15,9 +15,9 @@ function Toppings(_toppingsArr) {
   this.toppings = toppingsArr;
 };
 
-// function getPizzaPrice(pizzaSize) {
-//   return pizzaSize;
-// };
+function getPizzaPrice(_pizzaSize) {
+  return pizzaSize + 2;
+};
 
 function getToppingsPrice(_toppingsArr) {
   var price = 0;
@@ -41,7 +41,7 @@ Pizza.prototype.getCost = function() {
   // var price = 0;
   // price = inputtedPizzaSize;
   // console.log(price);
-  return /* pizzaSize + */ getToppingsPrice(toppingsArr);  // can't get this to work with any variation of pizzaSize, including this.size, Pizza.prototype.size, or any other related variable
+  return /* getPizzaPrice(pizzaSize) + */ getToppingsPrice(toppingsArr);  // can't get this to work with any variation of pizzaSize, including inputtedPizzaSize, this.size, Pizza.prototype.size, or any other related variable, and whether or not I use the getPizzaPrice() function or just the pizzaSize variable + 2
 };
 
 
@@ -53,6 +53,7 @@ $(document).ready(function() {
     event.preventDefault();
       // console.log("hello");
 
+    var pizzaSize;
     var inputtedPizzaSize = parseInt($("#pizza-size").val());  // gets pizza-size value (working)
       console.log(inputtedPizzaSize);
 
@@ -71,6 +72,9 @@ $(document).ready(function() {
     // $("span#pizza-cost").text(getPizzaPrice(inputtedPizzaSize));
     // $("span#pizza-cost").text(getToppingsPrice(toppingsArr)); // works
     $("span#pizza-cost").text(newPizza.cost); // works
+      console.log(getPizzaPrice(pizzaSize));
+      console.log(getToppingsPrice(toppingsArr));
+      console.log(typeof(pizzaSize));
       console.log(typeof(newPizza.cost));
   });
 });
