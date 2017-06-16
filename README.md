@@ -1,8 +1,10 @@
 # Chicago's Famous Pizza Company
 
-#### form-based order page for a fictitious pizza company created for Epicodus' Intro to Programming Week 4 independent project
+#### Form-based order page for a fictitious pizza company created for Epicodus' Intro to Programming Week 4 independent project
 
 #### By Nicole Freed
+
+#### on Github Pages: https://gitasong.github.io/pizza-company
 
 ## Description
 
@@ -39,7 +41,6 @@ Pizza Company Project Specs
 - Expected Output: Your cost: $13.79
 
 Key: √ = implemented; (√) = partially implemented
-
 
 ## Known Bugs
 
