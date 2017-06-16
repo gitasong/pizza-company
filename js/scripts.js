@@ -22,6 +22,11 @@ $(document).ready(function() {
 
     var inputtedPizzaSize = $("#pizza-size").val();
       // console.log(inputtedPizzaSize);
+      $("input:checkbox[name=pizza-toppings]:checked").each(function(){
+        var topping = $(this).val();
+        toppings.push(topping);
+      });
+      console.log(toppings);
 
     $(".display-cost").show();
   });
