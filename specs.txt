@@ -1,0 +1,21 @@
+Pizza Company Project Specs
+
+The user can choose the size of their pizza from among available options.
+Example Input: Options: 5" mini, 7", 9", 11", 13" - user chooses 7"
+Expected Output: 7"
+
+The user can choose a single topping for their pizza from among available options.
+Example Input: Options: pepperoni, sausage, mushrooms, onions, spinach, artichokes, pineapple, olives, extra cheese - user chooses artichokes
+Expected Output: artichokes
+
+The user can choose multiple toppings for their pizza from among available options.
+Example Input: Options: pepperoni, sausage, mushrooms, onions, spinach, artichokes, pineapple, olives, extra cheese - user chooses artichokes, sausage, and pineapple
+Expected Output: artichokes, sausage, pineapple
+
+The program will compute the total cost of the pizza from the chosen options.
+Example Input: 7" pizza, artichokes, sausage, pineapple - pizza costs $10, artichokes and pineapple cost $1 each, sausage costs $1.79
+Expected Output: $13.79
+
+The program will display the total cost of the pizza to the user.
+Example Input: <user chooses options above>
+Expected Output: Your cost: $13.79
