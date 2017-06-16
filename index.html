@@ -5,9 +5,53 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/scripts.js"></script>
-    <title></title>
+    <title>Chicago's Famous Pizza Company</title>
   </head>
   <body>
-
+    <div class="container-fluid">
+      <div class="jumbotron">
+        <h1>Chicago's Famous Pizza Company</h1>
+        <h3>Serving the best deep-dish pizza on the far side of the Rockies</h3>
+      </div>
+      <div class="container main">
+        <!-- main contents go here -->
+        <div class="row">
+          <div class="col-md-6">
+            <!-- pizza order form -->
+            <form id="pizza-order" method="submit">
+              <div class="form-group" id="pizza-size">
+                <label for="pizza-size">Select a pizza size:</label>
+                <select class="form-control" id="pizza-size">
+                  <option>5" mini - $7</option>
+                  <option>7" - $9</option>
+                  <option>9" - $11</option>
+                  <option>11" - $13</option>
+                  <option>13" - $15</option>
+                </select>
+              </div>
+              <div class="form-group" id="pizza-toppings">
+                <label for="pizza-toppings">Select your toppings. All toppings are $1 except for sausage and pepperoni, which cost $1.79, and extra cheese, which costs $0.50.</label>
+                <br />
+                <input type="checkbox" name="pizza-toppings" value="pepperoni"> pepperoni - $1.79<br>
+                <input type="checkbox" name="pizza-toppings" value="sausage"> sausage - $1.79<br>
+                <input type="checkbox" name="pizza-toppings" value="mushrooms"> mushrooms - $1<br>
+                <input type="checkbox" name="pizza-toppings" value="onions"> onions - $1<br>
+                <input type="checkbox" name="pizza-toppings" value="spinach"> spinach - $1<br>
+                <input type="checkbox" name="pizza-toppings" value="artichoke"> artichoke - $1<br>
+                <input type="checkbox" name="pizza-toppings" value="pineapple"> pineapple - $1<br>
+                <input type="checkbox" name="pizza-toppings" value="extra cheese"> extra cheese - $0.50<br>
+              </div>
+            </form>
+            <button type="submit" class="btn" id="order">Place my order!</button>
+            <div class="display-cost">
+              <h2>Your Total: <span> <!--cost display goes here --> </span></h2>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <!-- extra content goes here -->
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
