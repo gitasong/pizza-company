@@ -4,11 +4,11 @@ Pizza Company Project Specs
 Example Input: Options: 5" mini, 7", 9", 11", 13" - user chooses 7"
 Expected Output: 7"
 
-The user can choose a single topping for their pizza from among available options.
+√ The user can choose a single topping for their pizza from among available options.
 Example Input: Options: pepperoni, sausage, mushrooms, onions, spinach, artichokes, pineapple, olives, extra cheese - user chooses artichokes
 Expected Output: artichokes
 
-The user can choose multiple toppings for their pizza from among available options.
+√ The user can choose multiple toppings for their pizza from among available options.
 Example Input: Options: pepperoni, sausage, mushrooms, onions, spinach, artichokes, pineapple, olives, extra cheese - user chooses artichokes, sausage, and pineapple
 Expected Output: artichokes, sausage, pineapple
 
