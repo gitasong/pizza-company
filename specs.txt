@@ -1,6 +1,6 @@
 Pizza Company Project Specs
 
-The user can choose the size of their pizza from among available options.
+√ The user can choose the size of their pizza from among available options.
 Example Input: Options: 5" mini, 7", 9", 11", 13" - user chooses 7"
 Expected Output: 7"
 
