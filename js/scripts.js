@@ -1,5 +1,15 @@
 // business logic goes here
+function Pizza(size, cost) {
+  this.size = size;
+  this.toppings = [];
+  this.cost;
+};
 
+var toppings = [];
+
+Pizza.prototype.getCost = function() {
+  // implement function to get cost from pizza size and toppings
+};
 
 
 
