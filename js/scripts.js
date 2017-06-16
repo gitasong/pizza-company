@@ -70,8 +70,10 @@ $(document).ready(function() {
 
     resetFields();
 
+    $(".display-order").show();
     $(".display-cost").show();
 
+    $("span#order-details").text(inputtedPizzaSize + "-inch with " + toppingsArr);
     $("span#pizza-cost").text(newPizza.cost); // works
       console.log(getPizzaPrice(pizzaSize));
       console.log(getToppingsPrice(toppingsArr));
