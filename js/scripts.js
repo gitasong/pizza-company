@@ -44,6 +44,12 @@ Pizza.prototype.getCost = function() {
   return /* getPizzaPrice(pizzaSize) + */ getToppingsPrice(toppingsArr);  // can't get this to work with any variation of pizzaSize, including inputtedPizzaSize, this.size, Pizza.prototype.size, or any other related variable, and whether or not I use the getPizzaPrice() function or just the pizzaSize variable + 2
 };
 
+function resetFields() {
+  // resets form fields with empty string to clear them
+  $("#pizza-size").val("");
+  $("input:checkbox[name=pizza-toppings]").prop("checked", false);
+};
+
 
 
 // user-interface logic goes here
@@ -66,6 +72,8 @@ $(document).ready(function() {
     var newPizza = new Pizza(inputtedPizzaSize, toppingsArr, this.cost);  // creates new Pizza from inputted data (inputtedPizzaSize and toppingsArr working)
       console.log(newPizza.cost);
       console.log(newPizza);
+
+    resetFields();
 
     $(".display-cost").show();
     // $("span#pizza-cost").text(newPizza.cost);  // displays cost of full pizza with toppings
