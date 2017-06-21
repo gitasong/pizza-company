@@ -32,11 +32,11 @@ Pizza Company Project Specs
 - Example Input: Options: pepperoni, sausage, mushrooms, onions, spinach, artichokes, pineapple, olives, extra cheese - user chooses artichokes, sausage, and pineapple
 - Expected Output: artichokes, sausage, pineapple
 
-* (√) The program will compute the total cost of the pizza from the chosen options.
+* √ The program will compute the total cost of the pizza from the chosen options.
 - Example Input: 7" pizza, artichokes, sausage, pineapple - pizza costs $10, artichokes and pineapple cost $1 each, sausage costs $1.79
 - Expected Output: $13.79
 
-* (√) The program will display the total cost of the pizza to the user.
+* √ The program will display the total cost of the pizza to the user.
 - Example Input: <user chooses options above>
 - Expected Output: Your cost: $13.79
 
@@ -44,7 +44,7 @@ Key: √ = implemented; (√) = partially implemented
 
 ## Known Bugs
 
-Total price currently fails to properly incorporate the base pizza price for the size chosen (prototype function is not working). It only returns the price of the toppings. You get your pizza cheap! :)
+A couple of minor bugs: Toppings in pizza order details display without spaces after commas; prices ending in $.50 display without the trailing zero (e.g. $10.5).
 
 ## Support and contact details
 
