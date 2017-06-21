@@ -1,28 +1,21 @@
 // business logic goes here
-function Pizza(size, cost) {
-  this.size = size;
-  this.toppings = toppingsArr;
-  this.cost = Pizza.prototype.getCost();  // prototype method version of this.cost attribute
-  // this.cost = function() {
-  //   return inputtedPizzaSize + getToppingsPrice(toppingsArr);
-  // };  // function version of this.cost attribute
+function Pizza(pizzaSize, toppings) {
+  this.pizzaSize = pizzaSize;
+  this.toppings = toppings;
 };
 
-var toppingsArr = [];
-var pizzaSize = this.size;
-
-function Toppings(_toppingsArr) {
-  this.toppings = toppingsArr;
+Pizza.prototype.getPizzaPrice = function() {
+  console.log("this.pizzaSize = " + this.pizzaSize);
+  return this.pizzaSize += 2;
 };
 
-function getPizzaPrice(_pizzaSize) {
-  return pizzaSize + 2;
-};
-
-function getToppingsPrice(_toppingsArr) {
+Pizza.prototype.getToppingsPrice = function() {
+  console.log("this.toppings = " + this.toppings);
+  var toppingsArr = this.toppings;
   var price = 0;
   var runningTotal = 0;
-  toppingsArr.forEach(function(topping) {
+  console.log("this.toppingsArr = " + toppingsArr);  // WORKING
+  this.toppings.forEach(function(topping) {  // WORKING??
     if (topping === "pepperoni" || topping === "sausage") {
       price = 1.79;
     } else if (topping === "extra cheese") {
@@ -32,11 +25,15 @@ function getToppingsPrice(_toppingsArr) {
     };
     runningTotal += price;
   });
+  console.log("runningTotal = " + runningTotal);
   return runningTotal;
 };
 
+
 Pizza.prototype.getCost = function() {
-  return /* getPizzaPrice(pizzaSize) + */ getToppingsPrice(toppingsArr);  // can't get this to work with any variation of pizzaSize, including inputtedPizzaSize, this.size, Pizza.prototype.size, or any other related variable, and whether or not I use the getPizzaPrice() function or just the pizzaSize variable + 2
+  console.log("this.getPizzaPrice = " + this.getPizzaPrice());
+  console.log("this.getToppingsPrice = " + this.getToppingsPrice());
+  return this.getPizzaPrice() + this.getToppingsPrice();  // * undefined; I have no idea why
 };
 
 function resetFields() {
@@ -46,27 +43,24 @@ function resetFields() {
 };
 
 
-
 // user-interface logic goes here
 $(document).ready(function() {
   // console.log("hello");
   $("form#pizza-order").submit(function(event) {
     event.preventDefault();
-      // console.log("hello");
 
-    var pizzaSize;
     var inputtedPizzaSize = parseInt($("#pizza-size").val());  // gets pizza-size value (working)
-      console.log(inputtedPizzaSize);
+      console.log(inputtedPizzaSize);  // WORKING
 
+    var toppingsArr = [];
     $("input:checkbox[name=pizza-toppings]:checked").each(function(){
       var topping = $(this).val();
       toppingsArr.push(topping);
     });  // gets pizza toppings; pushes to toppingsArr (working)
-      console.log(toppingsArr);
+      console.log(toppingsArr);  // WORKING
 
-    var newPizza = new Pizza(inputtedPizzaSize, toppingsArr, this.cost);  // creates new Pizza from inputted data (inputtedPizzaSize and toppingsArr working)
-      console.log(newPizza.cost);
-      console.log(newPizza);
+    var newPizza = new Pizza(inputtedPizzaSize, toppingsArr);  // * this - creates new Pizza from inputted data (inputtedPizzaSize and toppingsArr working)
+      console.log(newPizza);  // WORKING
 
     resetFields();
 
@@ -74,10 +68,6 @@ $(document).ready(function() {
     $(".display-cost").show();
 
     $("span#order-details").text(inputtedPizzaSize + "-inch with " + toppingsArr);
-    $("span#pizza-cost").text(newPizza.cost); // works
-      console.log(getPizzaPrice(pizzaSize));
-      console.log(getToppingsPrice(toppingsArr));
-      console.log(typeof(pizzaSize));
-      console.log(typeof(newPizza.cost));
+    $("span#pizza-cost").text(newPizza.getCost());
   });
 });
