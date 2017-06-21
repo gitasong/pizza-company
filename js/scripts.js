@@ -25,14 +25,14 @@ Pizza.prototype.getToppingsPrice = function() {
     };
     runningTotal += price;
   });
-  console.log("runningTotal = " + runningTotal);
+  // console.log("runningTotal = " + runningTotal);
   return runningTotal;
 };
 
 
 Pizza.prototype.getCost = function() {
-  console.log("this.getPizzaPrice = " + this.getPizzaPrice());
-  console.log("this.getToppingsPrice = " + this.getToppingsPrice());
+  // console.log("this.getPizzaPrice = " + this.getPizzaPrice());
+  // console.log("this.getToppingsPrice = " + this.getToppingsPrice());
   return this.getPizzaPrice() + this.getToppingsPrice();  // * undefined; I have no idea why
 };
 
@@ -68,6 +68,7 @@ $(document).ready(function() {
     $(".display-cost").show();
 
     $("span#order-details").text(inputtedPizzaSize + "-inch with " + toppingsArr);
+    // console.log("Total cost: " + newPizza.getCost());
     $("span#pizza-cost").text(newPizza.getCost());
   });
 });
